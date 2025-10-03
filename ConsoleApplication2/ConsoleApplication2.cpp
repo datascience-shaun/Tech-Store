@@ -152,6 +152,29 @@ int main() {
     cout << "Final Total: R" << finalTotal << endl;
 
 
+    // Print receipt
+    cout << "\n\n********** RECEIPT **********\n";
+    cout << "Customer: " << firstname << " " << lastname << endl;
+    cout << "-----------------------------\n";
+    cout << left << setw(25) << "Item" << setw(10) << "Qty" << setw(10) << "Price" << endl;
+    cout << "-----------------------------\n";
+
+    for (int i = 0; i < purchaseItems; i++) {
+        int idx = chosenItems[i] - 1;
+        cout << left << setw(25) << catalogue[idx].name
+            << setw(10) << quantities[i]
+            << "R" << catalogue[idx].price * quantities[i] << endl;
+    }
+
+    cout << "-----------------------------\n";
+    if (disCount > 0) {
+        cout << "Discount Applied: R" << disCount << endl;
+    }
+    cout << "Final Total: R" << finalTotal << endl;
+    cout << "******************************\n";
+    cout << "Thank you for shopping with us!\n";
+
+
 
 
 	cout << "\n \n";
